@@ -34,3 +34,6 @@
 [submodule "prebuilt/rootfsbuilt/arm"]
 	path = prebuilt/rootfsbuilt/arm
 	url = https://github.com/bazzonrobocon/t113-x-tina-rootfsbuilt-arm
+[submodule "rtos"]
+	path = rtos
+	url = https://github.com/bazzonrobocon/t113-x-tina-rtos
