@@ -4,3 +4,6 @@
 [submodule "brandy/brandy-2.0/u-boot-2018"]
 	path = brandy/brandy-2.0/u-boot-2018
 	url = https://github.com/bazzonrobocon/t113-x-tina-u-boot-2018
+[submodule "kernel/linux-5.4"]
+	path = kernel/linux-5.4
+	url = https://github.com/bazzonrobocon/t113-x-tina-linux-5.4
