@@ -7,3 +7,6 @@
 [submodule "kernel/linux-5.4"]
 	path = kernel/linux-5.4
 	url = https://github.com/bazzonrobocon/t113-x-tina-linux-5.4
+[submodule "brandy/brandy-2.0/tools/toolchain"]
+	path = brandy/brandy-2.0/tools/toolchain
+	url = https://github.com/bazzonrobocon/t113-x-tina-toolchain
