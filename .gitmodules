@@ -10,3 +10,6 @@
 [submodule "brandy/brandy-2.0/tools/toolchain"]
 	path = brandy/brandy-2.0/tools/toolchain
 	url = https://github.com/bazzonrobocon/t113-x-tina-toolchain
+[submodule "buildroot/buildroot-201902"]
+	path = buildroot/buildroot-201902
+	url = https://github.com/bazzonrobocon/t113-x-tina-buildroot-buildroot-201902
