@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PQD
+	bool "pqd"
+	help
+	  pqd is deamon for display picture quality debug.

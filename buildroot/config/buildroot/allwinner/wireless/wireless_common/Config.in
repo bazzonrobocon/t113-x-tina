@@ -1,0 +1,4 @@
+config BR2_PACKAGE_WIRELESS_COMMON
+	bool "wireless_common"
+	help
+	  Wi-Fi/BT api_action and log tracing

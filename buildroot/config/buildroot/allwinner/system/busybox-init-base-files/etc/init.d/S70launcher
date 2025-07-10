@@ -1,0 +1,83 @@
+#!/bin/sh
+#
+# Start the launcher
+#
+if [ -f "/lib/modules/5.4.61/gt9xxnew_ts.ko"  ];then
+	insmod /lib/modules/5.4.61/gt9xxnew_ts.ko
+fi
+case "$1" in
+    start)
+		if [ ! -f "/usr/bin/qtlauncher" ];then
+			exit 1
+		fi
+
+		if [ -d "/usr/local/Qt_5.12.5" ];then
+			export  QTDIR=/usr/local/Qt_5.12.5
+		else
+			export  QTDIR=/usr/lib
+		fi
+
+		if [ -d $QTDIR ];then
+
+			export  QT_ROOT=$QTDIR
+			export  PATH=$QTDIR/bin:$PATH
+			export  LD_LIBRARY_PATH=$QTDIR/lib:/usr/lib/cedarx/:$LD_LIBRARY_PATH
+
+			export QT_QPA_PLATFORM_PLUGIN_PATH=$QT_ROOT/plugins
+			export QT_QPA_PLATFORM=linuxfb:tty=/dev/fb0
+			export QT_QPA_FONTDIR=$QT_ROOT/fonts
+
+			TouchDevice=gt9xxnew_ts
+			for InputDevices in /sys/class/input/input*
+			do
+				DeviceName=`cat $InputDevices/name`
+				if [ "$DeviceName" == "$TouchDevice" ];then
+					TouchDeviceNum=${InputDevices##*input}
+					export QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS=/dev/input/event$TouchDeviceNum 
+					echo "add "/dev/input/event$TouchDeviceNum "to Qt Application."
+					break
+				fi
+			done
+			if [ ! -n "$TouchDeviceNum" ]; then
+				echo "Error:Input device $TouchDevice can not be found,plz check it!"
+			fi
+
+			if [ -d "/usr/local/Qt_5.12.5" ];then
+				export QT_QPA_PLATFORM=eglfs
+				export QT_QPA_GENERIC_PLUGINS=evdevtouch
+				export QT_QPA_EGLFS_INTEGRATION=eglfs_mali
+			else
+				export QT_QPA_FONTDIR=/usr/lib/fonts
+				#export QT_QPA_GENERIC_PLUGINS=tslib
+				#export QT_QPA_GENERIC_PLUGINS=evdevmouse:/dev/input/event4
+				#export QT_QPA_GENERIC_PLUGINS=evdevtouch:/dev/input/event$TouchDeviceNum
+				if [ -f "/lib/modules/5.4.61/gt9xxnew_ts.ko"  ];then
+					echo "don't set evdevtouch"
+				else
+					export QT_QPA_GENERIC_PLUGINS=evdevtouch:/dev/input/event$TouchDeviceNum
+	
+				fi
+				export TSLIB_FBDEVICE=/dev/fb0
+				export TSLIB_CONSOLEDEVICE=none
+				export TSLIB_TSDEVICE=/dev/input/event4
+				export TSLIB_CONFFILE=/etc/ts.conf
+				export TSLIB_CALIBFILE=/etc/pointercal
+				export TSLIB_PLUGINDIR=/usr/lib/ts
+			fi
+
+			export QWS_MOUSE_PROTO=
+			mkdir -p /dev/shm
+			ulimit -c unlimited
+			qtlauncher &
+			qt_daemon &
+		fi
+        ;;
+    stop)]
+        ;;
+    *)
+        echo "Usage: $0 {start}"
+        exit 1
+        ;;
+esac
+
+exit 0

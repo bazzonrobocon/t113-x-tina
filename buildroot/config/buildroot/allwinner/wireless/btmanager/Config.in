@@ -1,0 +1,17 @@
+config BR2_PACKAGE_BTMANAGER
+	bool "btmanager-core"
+	select BR2_PACKAGE_BLUEZ5_UTILS
+	select BR2_PACKAGE_WIRELESS_COMMON
+	select BR2_PACKAGE_DBUS
+	select BR2_PACKAGE_LIBGLIB2
+	select BR2_PACKAGE_ALSA_LIB
+	select BR2_PACKAGE_JSON_C
+	select BR2_PACKAGE_BLUEZ_ALSA
+	help
+	  bluetooth manager core
+
+config BR2_PACKAGE_BTMG_DEMO
+	bool "Enable btmanager demo support"
+	depends on BR2_PACKAGE_BTMANAGER
+	help
+	  btmanager demo bt_test

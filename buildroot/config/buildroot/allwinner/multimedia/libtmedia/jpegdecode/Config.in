@@ -1,0 +1,7 @@
+config BR2_PACKAGE_JPEGDECODE
+	bool "libjpegdecode"
+	depends on BR2_PACKAGE_LIBCEDARX
+	default y
+	help
+	  Dynamic-link library of jpegdecode
+

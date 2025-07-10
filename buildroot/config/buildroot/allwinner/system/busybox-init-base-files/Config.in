@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BUSYBOX_INIT_BASE_FILES
+	bool "busybox-init-base-files"
+	help
+	  update files for rootfs
+

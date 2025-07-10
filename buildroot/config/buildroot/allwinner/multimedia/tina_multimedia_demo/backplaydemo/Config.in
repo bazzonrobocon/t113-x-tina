@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BACKPLAYDEMO
+    bool "backplaydemo"
+    depends on BR2_PACKAGE_TPLAYER
+    help
+        demo for playing video in background

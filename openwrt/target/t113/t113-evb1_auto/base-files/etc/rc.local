@@ -1,0 +1,19 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+amixer cset name="HPOUT Switch" 1
+
+# capture
+amixer -Dhw:audiocodec cset name='MIC3 Input Select' 0
+
+amixer -Dhw:audiocodec cset name='Input1 Mux' 1
+amixer -Dhw:audiocodec cset name='LINEINL Switch' 1
+amixer -Dhw:audiocodec cset name='Input2 Mux' 2
+amixer -Dhw:audiocodec cset name='LINEINR Switch' 1
+amixer -Dhw:audiocodec cset name='MIC3 Switch' 1
+
+amixer -Dhw:audiocodec cset name='LINEINL Gain' 1
+amixer -Dhw:audiocodec cset name='LINEINR Gain' 1
+amixer -Dhw:audiocodec cset name='ADC3 Gain' 19
+
+exit 0

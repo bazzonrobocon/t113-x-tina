@@ -1,0 +1,22 @@
+config BR2_PACKAGE_AI_SDK
+	bool "ai sdk"
+	help
+	  ai sdk.
+
+if BR2_PACKAGE_AI_SDK
+config BR2_PACKAGE_AI_SDK_VIPLITTE
+	bool "ai sdk viplite lib"
+	help
+	    NPU viplite framework for allwinner
+
+config BR2_PACKAGE_AI_SDK_VIPLITTE_SAMPLE
+	bool "ai sdk viplite sample"
+	depends on BR2_PACKAGE_AI_SDK_VIPLITTE
+	help
+	    Whether install viplite sample
+
+config BR2_PACKAGE_AI_SDK_UNIFY
+	bool "ai sdk unify lib"
+	help
+	    NPU unify framework for allwinner
+endif

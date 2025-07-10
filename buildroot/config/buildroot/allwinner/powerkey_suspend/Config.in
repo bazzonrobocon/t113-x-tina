@@ -1,0 +1,4 @@
+config BR2_PACKAGE_POWERKEY_SUSPEND
+	bool "powerkey_suspend"
+	help
+	  powerkey support suspend

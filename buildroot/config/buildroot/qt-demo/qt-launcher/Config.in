@@ -1,0 +1,5 @@
+config BR2_PACKAGE_QT_LAUNCHER
+	bool "Launcher for qt"
+	depends on BR2_PACKAGE_QT5_EXTERNAL || BR2_PACKAGE_QT5BASE
+	help
+	  launcher ui for test

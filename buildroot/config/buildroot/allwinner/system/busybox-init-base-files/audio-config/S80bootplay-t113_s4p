@@ -1,0 +1,34 @@
+#backplaydemo /etc/1.mp4 1
+
+case "$1" in
+    start)
+		amixer -D hw:audiocodec cset name='HPOUT Switch' on
+		amixer -D hw:audiocodec cset name='LINEOUTL Switch' on
+		amixer -D hw:audiocodec cset name='LINEOUTR Switch' on
+		amixer -D hw:audiocodec cset name='LINEOUT Volume' 20
+		amixer -D hw:audiocodec cset name='SPK Switch' on
+		amixer -D hw:audiocodec cset name='HPOUT Switch' on
+		amixer -D hw:audiocodec cset name='Input3 Mux' on
+		amixer -D hw:audiocodec cset name='MIC3 Switch' on
+		amixer -D hw:audiocodec cset name='MIC3 Input Select' 1
+
+        backplaydemo /etc/1.mp4 1
+        ;;
+    stop)]
+		amixer -D hw:audiocodec cset name='HPOUT Switch' off
+		amixer -D hw:audiocodec cset name='LINEOUTL Switch' off
+		amixer -D hw:audiocodec cset name='LINEOUTR Switch' off
+		amixer -D hw:audiocodec cset name='LINEOUT Volume' 20
+		amixer -D hw:audiocodec cset name='SPK Switch' off
+		amixer -D hw:audiocodec cset name='HPOUT Switch' off
+		amixer -D hw:audiocodec cset name='Input3 Mux' off
+		amixer -D hw:audiocodec cset name='MIC3 Switch' off
+		amixer -D hw:audiocodec cset name='MIC3 Input Select' 1
+
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+
+exit 0

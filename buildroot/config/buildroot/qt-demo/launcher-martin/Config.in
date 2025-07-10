@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LAUNCHER_MARTIN
+	bool "launcher-martin"
+	depends on BR2_PACKAGE_QT5_EXTERNAL || BR2_PACKAGE_QT5BASE
+	help
+	  launcher ui for app

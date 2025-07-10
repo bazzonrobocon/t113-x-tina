@@ -1,0 +1,5 @@
+config BR2_PACKAGE_RECORDER_DEMO
+	bool "recorder_demo"
+	depends on BR2_PACKAGE_LIBCEDARE
+	help
+	  Dynamic-link library of recorder_demo

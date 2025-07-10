@@ -1,0 +1,16 @@
+if BR2_PACKAGE_LIBCEDARX
+menu "tina_multimedia_demo"
+config CONFIG_XPLAYER_DEMO
+    bool "xplayerdemo"
+    default n
+    help
+        xplayerdemo
+
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/tplayerdemo/Config.in"
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/trecorderdemo/Config.in"
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/backplaydemo/Config.in"
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/jpegdecodedemo/Config.in"
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/encodertest/Config.in"
+
+endmenu
+endif

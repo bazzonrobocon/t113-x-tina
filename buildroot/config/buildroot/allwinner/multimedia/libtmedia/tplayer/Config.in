@@ -1,0 +1,13 @@
+config BR2_PACKAGE_TPLAYER
+    bool "libtplayer"
+    depends on BR2_PACKAGE_LIBCEDARX
+    select BR2_PACKAGE_LIBUAPI
+    help
+        Dynamic-link library of tplayer
+
+config TINA_PACKAGE_PATH_PREFIX
+    string
+    prompt "tina multimedia package path prefix: openwrt or buildroot"
+    default openwrt
+    help
+        set to openwrt or buildroot.

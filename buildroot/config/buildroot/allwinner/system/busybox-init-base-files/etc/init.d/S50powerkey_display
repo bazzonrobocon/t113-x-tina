@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# Start the powerkey_display
+#
+
+app_name="powerkey_display"
+app_path="/usr/bin/${app_name}"
+
+case "$1" in
+    start)
+        if [ ${app_path} ] ; then
+			${app_name} &
+		fi
+        ;;
+    stop)]
+	    if [ ${app_path} ] ; then
+			killall ${app_name} &
+		fi
+        ;;
+    *)
+        echo "Usage: $0 {start}"
+        exit 1
+        ;;
+esac
+
+exit 0

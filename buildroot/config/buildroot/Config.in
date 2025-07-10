@@ -1,0 +1,100 @@
+menu "allwinner platform private package select"
+
+menu "power"
+
+endmenu
+
+menu "platform"
+source "../config/buildroot/allwinner/platform/Config.in"
+endmenu
+
+menu "system"
+source "../config/buildroot/allwinner/system/ota/ota-burnboot/Config.in"
+endmenu
+
+menu "usb"
+source "../config/buildroot/allwinner/usb/mtp/Config.in"
+source "../config/buildroot/allwinner/usb/adbd/Config.in"
+endmenu
+
+menu "powerkey"
+source "../config/buildroot/allwinner/powerkey_display/Config.in"
+source "../config/buildroot/allwinner/powerkey_suspend/Config.in"
+endmenu
+
+menu "utils"
+source "../config/buildroot/allwinner/utils/boot-play/Config.in"
+source "../config/buildroot/allwinner/utils/cpu_monitor/Config.in"
+source "../config/buildroot/allwinner/utils/mtop/Config.in"
+endmenu
+
+menu "qt5_external"
+source "../config/buildroot/qt5_external/Config.in"
+endmenu
+
+menu "qt-demo"
+source "../config/buildroot/qt-demo/qt-launcher/Config.in"
+source "../config/buildroot/qt-demo/launcher-martin/Config.in"
+source "../config/buildroot/qt-demo/qt-keypad/Config.in"
+source "../config/buildroot/qt-demo/qt-rtc/Config.in"
+source "../config/buildroot/qt-demo/qt-watchdog/Config.in"
+endmenu
+
+menu "wireless"
+source "../config/buildroot/allwinner/wireless/wifimanager/Config.in"
+source "../config/buildroot/allwinner/wireless/wireless_common/Config.in"
+source "../config/buildroot/allwinner/wireless/btmanager/Config.in"
+source "../config/buildroot/wifi-firmware/Config.in"
+endmenu
+
+menu busybox-init-base-files
+source "../config/buildroot/allwinner/system/busybox-init-base-files/Config.in"
+endmenu
+
+menu "multimedia"
+
+menu libcedarx
+source "../config/buildroot/allwinner/multimedia/libcedarx/Config.in"
+endmenu
+
+menu "libtmedia"
+source "../config/buildroot/allwinner/multimedia/tina_multimedia_demo/Config.in"
+source "../config/buildroot/allwinner/multimedia/libtmedia/Config.in"
+endmenu
+
+menu libcedarc
+source "../config/buildroot/allwinner/multimedia/libcedarc/Config.in"
+endmenu
+
+menu libcedare
+source "../config/buildroot/allwinner/multimedia/libcedare/Config.in"
+endmenu
+
+menu "libcedarse"
+source "../config/buildroot/allwinner/multimedia/libcedarse/Config.in"
+endmenu
+
+endmenu
+
+menu "lvgl"
+source "../config/buildroot/lvgl-8/Config.in"
+endmenu
+
+menu "display"
+source "../config/buildroot/allwinner/pqd/Config.in"
+source "../config/buildroot/libuapi/Config.in"
+source "../config/buildroot/gpu_um_pub/Config.in"
+endmenu
+
+menu "openamp"
+source "../config/buildroot/amp_shell/Config.in"
+source "../config/buildroot/rpmsg/Config.in"
+source "../config/buildroot/rpbuf/Config.in"
+endmenu
+
+
+menu "ai-sdk"
+source "../config/buildroot/ai-sdk/Config.in"
+endmenu
+
+endmenu

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_JPEGDECODEDEMO
+    bool "jpegdecodedemo"
+    depends on BR2_PACKAGE_JPEGDECODE
+    help
+        demo for decoding jpeg

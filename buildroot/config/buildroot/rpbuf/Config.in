@@ -1,0 +1,17 @@
+config BR2_PACKAGE_RPBUF
+	bool "rpbuf"
+	help
+	  amp rpbuf.
+
+if BR2_PACKAGE_RPBUF
+config BR2_PACKAGE_RPBUF_DEMO
+	bool "rpbuf demo"
+	help
+	  rpbuf demo
+
+config BR2_PACKAGE_RPBUF_TEST
+	bool "rpbuf test"
+	help
+	  rpbuf test
+endif
+

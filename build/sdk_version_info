@@ -1,0 +1,12 @@
+1.版本：T113-x_AW1.0_RV1.0_20240806
+说明：
+支持T113s2,T113s3,T113s4,T113_i,T113s3p,T113s4p芯片型号
+支持uboot2018,linux-5.4
+支持buildroot-2019, openwrt21
+支持G2D；支持RGB、LVDS、MIPI显示；
+支持芯片规格内的视频播放，图片播放，音乐播放等多媒体功能。
+支持常规USB烧录、启动；支持OTA升级；
+支持U盘，SD卡等存储介质挂载；支持exfat，fat32，ntfs等文件系统；
+支持USB以及TWI，SPI，PWM等通用外设。
+本版本SDK继承于23年发布的s3p/s4p SDK，包含有四核异构，快速倒车等特性及demo，并整合添加s2/s3/i芯片，支持T113系列所有芯片
+添加oci的qtdemo和oci开发板的支持

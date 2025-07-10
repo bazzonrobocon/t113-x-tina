@@ -1,0 +1,4 @@
+config BR2_PACKAGE_AMP_SHELL
+	bool "amp_shell"
+	help
+	  amp shell support

@@ -1,0 +1,3 @@
+source "../config/buildroot/allwinner/multimedia/libtmedia/tplayer/Config.in"
+source "../config/buildroot/allwinner/multimedia/libtmedia/jpegdecode/Config.in"
+source "../config/buildroot/allwinner/multimedia/libtmedia/trecorder/Config.in"

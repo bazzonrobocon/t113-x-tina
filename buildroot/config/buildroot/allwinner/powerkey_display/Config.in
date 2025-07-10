@@ -1,0 +1,4 @@
+config BR2_PACKAGE_POWERKEY_DISPLAY
+	bool "powerkey_display"
+	help
+	  powerkey support close and open the screen

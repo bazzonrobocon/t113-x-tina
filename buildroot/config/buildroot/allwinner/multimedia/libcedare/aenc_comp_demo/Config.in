@@ -1,0 +1,6 @@
+config BR2_PACKAGE_AEENC_COMP_DEMO
+	bool "aenc_comp_demo"
+	depends on BR2_PACKAGE_LIBCEDARE
+	help
+	  Dynamic-link library of aenc_comp_demo
+

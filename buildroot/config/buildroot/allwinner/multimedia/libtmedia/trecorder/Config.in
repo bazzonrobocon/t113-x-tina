@@ -1,0 +1,21 @@
+config BR2_PACKAGE_TRECORDER
+	bool "libtrecorder"
+	depends on BR2_PACKAGE_LIBCEDARX
+	help
+	  Dynamic-link library of trecorder
+
+config DEFAULT_SOUNDCARD
+    int
+    prompt "Choose default card"
+    depends on BR2_PACKAGE_TRECORDER
+    default 0
+    help
+        Choose which soundcard to recorder
+config DEFAULT_DEVICE
+    int
+    prompt "Choose default pcm device"
+    depends on BR2_PACKAGE_TRECORDER
+    default 0
+    help
+        choose which pcm device to recorder.
+

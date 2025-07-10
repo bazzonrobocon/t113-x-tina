@@ -1,0 +1,80 @@
+menu "firmware"
+config BR2_PACKAGE_WIFI_FIRMWARE
+	bool "wifi bt firmware"
+	help
+	  copy wifi bt firmware to rootfs
+
+if BR2_PACKAGE_WIFI_FIRMWARE
+
+config BR2_PACKAGE_RTL8723DS_FIRMWARE
+	bool "rtl8723ds-firmware"
+	help
+	  rtl8723ds firmware.
+
+config BR2_PACKAGE_RTL8733BS_FIRMWARE
+	bool "rtl8733bs-firmware"
+	help
+	  rtl8733bs firmware.
+
+config BR2_PACKAGE_RTL8821CS_FIRMWARE
+	bool "rtl8821cs-firmware"
+	help
+	  rtl8821cs firmware.
+
+config BR2_PACKAGE_AIC8800_FIRMWARE
+	bool "aic8800-firmware"
+	help
+	  aic8800 firmware.
+
+config BR2_PACKAGE_SSV6158_FIRMWARE
+	bool "ssv6158-firmware"
+	help
+	  ssv6158 firmware.
+
+config BR2_PACKAGE_XR819_FIRMWARE
+	bool "xr819-firmware"
+	help
+	  xr819 firmware.
+
+config BR2_PACKAGE_XR819A_FIRMWARE
+	bool "xr819a-firmware"
+	help
+	  xr819a firmware.
+
+config BR2_PACKAGE_XR829_FIRMWARE
+	bool "xr829-firmware"
+	help
+	  xr829 firmware.
+
+config BR2_PACKAGE_XR829_USE_40M
+	bool "xr829_40M"
+	depends on BR2_PACKAGE_XR829_FIRMWARE
+	help
+	  xr829 40M crystal oscillator.
+
+config BR2_PACKAGE_XR829_USE_24M
+	bool "xr829_24M"
+	depends on BR2_PACKAGE_XR829_FIRMWARE
+	help
+	  xr829 24M crystal oscillator.
+
+config BR2_PACKAGE_XR819S_FIRMWARE
+	bool "xr819s-firmware"
+	help
+	  xr819s firmware.
+
+config BR2_PACKAGE_XR819S_USE_40M
+	bool "xr819s_40M"
+	depends on BR2_PACKAGE_XR819S_FIRMWARE
+	help
+	  xr819s 40M crystal oscillator.
+
+config BR2_PACKAGE_XR819S_USE_24M
+	bool "xr819s_24M"
+	depends on BR2_PACKAGE_XR819S_FIRMWARE
+	help
+	  xr819s 24M crystal oscillator.
+
+endif
+
+endmenu

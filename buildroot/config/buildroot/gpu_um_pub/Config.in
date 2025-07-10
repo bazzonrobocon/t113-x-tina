@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GPU_UM_PUB
+	bool "Support SUNXI GPU_UM_PUB"
+	help
+	  Support SUNXI GPU_UM_PUB
+

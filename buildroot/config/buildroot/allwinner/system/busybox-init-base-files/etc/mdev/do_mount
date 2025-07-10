@@ -1,0 +1,17 @@
+#!/bin/sh
+mount -t vfat $@
+if [ $? -ne 0 ]; then
+	mount.ntfs-3g $@
+	if [ $? -ne 0 ]; then
+		sleep 1
+		if [ ! -d $2 ]; then
+			echo "mkdir $2"
+			mkdir $2
+		fi
+		mount.exfat $@
+		if [ $? -ne 0 ]; then
+			mount $@
+		fi
+	fi
+fi
+

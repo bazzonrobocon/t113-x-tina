@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TRECORDERDEMO
+    bool "treocrderdemo"
+    depends on BR2_PACKAGE_TRECORDER
+    help
+        demo for video recording

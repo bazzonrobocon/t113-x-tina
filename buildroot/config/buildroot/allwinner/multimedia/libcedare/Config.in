@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBCEDARE
+	bool "libcedare"
+	select BR2_PACKAGE_LIBCEDARX
+	help
+	  libcedare
+if BR2_PACKAGE_LIBCEDARE
+menu "libcedare-demo"
+comment "Select libcedare demo"
+source "../config/buildroot/allwinner/multimedia/libcedare/aenc_comp_demo/Config.in"
+source "../config/buildroot/allwinner/multimedia/libcedare/recorder_demo/Config.in"
+source "../config/buildroot/allwinner/multimedia/libcedare/venc_comp_demo/Config.in"
+endmenu
+endif

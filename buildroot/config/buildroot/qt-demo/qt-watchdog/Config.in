@@ -1,0 +1,5 @@
+config BR2_PACKAGE_QT_WATCHDOG
+	bool "watchdog for qt"
+	depends on BR2_PACKAGE_QT5_EXTERNAL || BR2_PACKAGE_QT5BASE
+	help
+	  watchdog ui for test

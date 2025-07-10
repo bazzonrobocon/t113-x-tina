@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LIBCEDARX
+	bool "libcedarx"
+	select BR2_PACKAGE_OPENSSL
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_LIBCEDARC
+	select BR2_PACKAGE_ALSA_LIB
+	default y
+	help
+	  libcedarx

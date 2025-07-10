@@ -1,0 +1,17 @@
+config BR2_PACKAGE_LIBCEDARSE
+	bool "Support sunxi libcedarse"
+	help
+	  Support sunxi libcedarse
+
+config BR2_PACKAGE_CEDARSE_PARM_ADJUST
+	bool "cedarSE parm adjust"
+	depends on BR2_PACKAGE_LIBCEDARSE
+	help
+	  cedarSE parm adjust
+
+config BR2_PACKAGE_CEDARSE_DEMO
+	bool "cedarSE demo"
+	depends on BR2_PACKAGE_LIBCEDARSE
+	depends on BR2_PACKAGE_RPBUF
+	help
+	  cedarSE demo

@@ -1,0 +1,17 @@
+config BR2_PACKAGE_RPMSG
+	bool "rpmsg"
+	help
+	  amp rpmsg.
+
+if BR2_PACKAGE_RPMSG
+config BR2_PACKAGE_RPMSG_DEMO
+	bool "rpmsg demo"
+	help
+	  rpmsg demo
+
+config BR2_PACKAGE_RPMSG_TEST
+	bool "rpmsg test"
+	help
+	  rpmsg test
+endif
+

@@ -1,0 +1,40 @@
+WIRELESS_COMMON_VERSION = 1.0.0
+WIRELESS_COMMON_SITE_METHOD = local
+WIRELESS_COMMON_SITE = $(PLATFORM_PATH)/../../../platform/allwinner/wireless/common/src
+
+WIRELESS_COMMON_LICENSE = GPLv2+, GPLv3+
+WIRELESS_COMMON_LICENSE_FILES = Copyright COPYING
+WIRELESS_COMMON_INSTALL_TARGET = YES
+WIRELESS_COMMON_INSTALL_STAGING = YES
+
+WIRELESS_COMMON_CFLAGS = $(TARGET_CFLAGS)
+WIRELESS_COMMON_LDFLAGS = $(TARGET_LDFLAGS)
+WIRELESS_COMMON_LDFLAGS += -lpthread -lrt -lm -ldl
+
+
+define WIRELESS_COMMON_BUILD_CMDS
+	[ ! -e PKG_INSTALL_DIR ] && mkdir -p $(PKG_INSTALL_DIR)
+	$(MAKE) -C $(@D) \
+		ARCH="$(TARGET_ARCH)" \
+		AR="$(TARGET_AR)" \
+		CC="$(TARGET_CC)" \
+		CXX="$(TARGET_CXX)" \
+		CFLAGS="$(WIRELESS_COMMON_CFLAGS)" \
+		LDFLAGS="$(WIRELESS_COMMON_LDFLAGS)" \
+		CONFIG_PREFIX="$(PKG_INSTALL_DIR)" \
+		PKG_BUILD_DIR="$(@D)" \
+		all
+endef
+
+define WIRELESS_COMMON_INSTALL_STAGING_CMDS
+	mkdir -p $(STAGING_DIR)/usr/include
+	mkdir -p $(STAGING_DIR)/usr/lib
+	cp -rf $(PKG_INSTALL_DIR)/usr/include/*.h  $(STAGING_DIR)/usr/include
+	cp -rf $(PKG_INSTALL_DIR)/usr/lib/libwirelesscom.so $(STAGING_DIR)/usr/lib
+endef
+
+define WIRELESS_COMMON_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0644 $(PKG_INSTALL_DIR)/usr/lib/libwirelesscom.so $(TARGET_DIR)/lib
+endef
+
+$(eval $(generic-package))

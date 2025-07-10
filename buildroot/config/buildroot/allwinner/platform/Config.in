@@ -1,0 +1,128 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+
+menu "Allwinner Platform Selection"
+
+choice
+	prompt "Select SoC Family"
+	default BR2_ARCH_SUNXX
+	help
+	  Select the Family for SoC
+
+config BR2_ARCH_SUN8I
+	bool "Allwinner SUN8I"
+	depends on BR2_arm
+	help
+	  Allwinner SUN8I SoC Family
+
+config BR2_ARCH_SUN50I
+	bool "Allwinner SUN50I"
+	depends on BR2_aarch64
+	help
+	  Allwinner SUN50I SoC Family
+
+config BR2_ARCH_SUN55I
+	bool "Allwinner SUN55I"
+	depends on BR2_aarch64
+	help
+	  Allwinner SUN55I SoC Family
+
+config BR2_ARCH_SUN60I
+	bool "Allwinner SUN60I"
+	depends on BR2_aarch64
+	help
+	  Allwinner SUN60I SoC Family
+
+config BR2_ARCH_SUNXX
+	bool "NONE"
+	help
+	  Allwinner NONE SoC Family
+
+
+endchoice
+
+choice
+	prompt "Select the Wafer"
+	default BR2_ARCH_SUNXXXWXX
+	help
+	  Select the wafer
+
+config BR2_ARCH_SUN50IW9
+	bool "SUN50IW9"
+	depends on BR2_ARCH_SUN50I
+	help
+	  Support for Allwinner SUN50IW9 SoC
+
+config BR2_ARCH_SUN50IW10
+	bool "SUN50IW10"
+	depends on BR2_ARCH_SUN50I
+	help
+	  Support for Allwinner SUN50IW10 SoC
+
+config BR2_ARCH_SUN50IW12
+	bool "SUN50IW12"
+	depends on BR2_ARCH_SUN50I
+	help
+	  Support for Allwinner SUN50IW12 SoC
+
+config BR2_ARCH_SUN55IW3
+	bool "SUN55IW3"
+	depends on BR2_ARCH_SUN55I
+	help
+	  Support for Allwinner SUN55IW3 SoC
+
+
+config BR2_ARCH_SUN8IW11
+	bool "SUN8IW11"
+	depends on BR2_ARCH_SUN8I
+	help
+	  Support for Allwinner SUN8IW11 SoC
+
+config BR2_ARCH_SUN8IW18
+	bool "SUN8IW18"
+	depends on BR2_ARCH_SUN8I
+	help
+	  Support for Allwinner SUN8IW18 SoC
+
+config BR2_ARCH_SUN8IW20
+	bool "SUN8IW20"
+	depends on BR2_ARCH_SUN8I
+	help
+	  Support for Allwinner SUN8IW20 SoC
+
+config BR2_ARCH_SUNXXXWXX
+	bool "NONE"
+	help
+	  Support for Allwinner NONE SoC
+
+endchoice
+
+choice
+	prompt "Select the SoC"
+	help
+	  Select the SoC
+
+config BR2_ARCH_SUN50IW10P1
+	depends on BR2_ARCH_SUN50IW10
+	bool "Allwinner SUN50IW10P1"
+
+config BR2_ARCH_SUN55IW3P1
+	depends on BR2_ARCH_SUN55IW3
+	bool "Allwinner SUN55IW3P1"
+
+config BR2_ARCH_SUNXXXWXXPX
+	bool "NONE"
+	help
+	  Support for Allwinner NONE SoC
+
+endchoice
+
+
+config AW_SOC_NAME
+	string "SoC Name"
+	default ""
+	depends on AW_BSP
+	help
+	  Used by sysfs: /sys/.../sysinfo
+
+endmenu

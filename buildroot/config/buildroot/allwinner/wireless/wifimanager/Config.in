@@ -1,0 +1,20 @@
+# wifimanager
+config BR2_PACKAGE_WIFIMANAGER
+	bool "wifimanager-v2.0"
+	help
+	Tina wifimanager-v2.0
+
+config BR2_PACKAGE_WIFIMANAGER_LIB
+	bool "wifimanager-v2.0-lib"
+	depends on BR2_PACKAGE_WIFIMANAGER
+	select BR2_PACKAGE_WIRELESS_COMMON
+	select BR2_PACKAGE_LIBNL
+	select BR2_PACKAGE_WIRELESS_BTMANAGER
+	help
+	Tina wifimanager-v2.0 lib
+
+config BR2_PACKAGE_WIFIMANAGER_DEMO
+	bool "Tina wifimanager-v2.0-demo"
+	depends on BR2_PACKAGE_WIFIMANAGER_LIB
+	help
+	Tina wifimanager-v2.0 app demo

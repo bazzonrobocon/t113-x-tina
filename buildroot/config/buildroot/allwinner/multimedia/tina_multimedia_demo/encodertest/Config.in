@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ENCODERTEST
+    bool "encodertest"
+    depends on BR2_PACKAGE_LIBCEDARX
+    help
+        demo for encoding h264/jpeg

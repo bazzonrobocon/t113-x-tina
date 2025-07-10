@@ -1,0 +1,5 @@
+config BR2_PACKAGE_VENC_COMP_DEMO
+	bool "venc_comp_demo"
+	depends on BR2_PACKAGE_LIBCEDARE
+	help
+	  Dynamic-link library of venc_comp_demo
