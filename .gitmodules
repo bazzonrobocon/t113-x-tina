@@ -13,3 +13,6 @@
 [submodule "buildroot/buildroot-201902"]
 	path = buildroot/buildroot-201902
 	url = https://github.com/bazzonrobocon/t113-x-tina-buildroot-buildroot-201902
+[submodule "buildroot/package"]
+	path = buildroot/package
+	url = https://github.com/bazzonrobocon/t113-x-tina-buildroot-package
