@@ -1,0 +1,3 @@
+[submodule "brandy/brandy-2.0/spl-pub"]
+	path = brandy/brandy-2.0/spl-pub
+	url = https://github.com/bazzonrobocon/t113-x-tina-spl-pub
