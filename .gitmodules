@@ -16,3 +16,6 @@
 [submodule "buildroot/package"]
 	path = buildroot/package
 	url = https://github.com/bazzonrobocon/t113-x-tina-buildroot-package
+[submodule "openwrt/dl"]
+	path = openwrt/dl
+	url = https://github.com/bazzonrobocon/t113-x-tina-openwrt-dl
