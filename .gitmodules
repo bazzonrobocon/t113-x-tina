@@ -19,3 +19,6 @@
 [submodule "openwrt/dl"]
 	path = openwrt/dl
 	url = https://github.com/bazzonrobocon/t113-x-tina-openwrt-dl
+[submodule "openwrt/package"]
+	path = openwrt/package
+	url = https://github.com/bazzonrobocon/t113-x-tina-openwrt-package
