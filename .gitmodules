@@ -37,3 +37,6 @@
 [submodule "rtos"]
 	path = rtos
 	url = https://github.com/bazzonrobocon/t113-x-tina-rtos
+[submodule "tools"]
+	path = tools
+	url = https://github.com/bazzonrobocon/t113-x-tina-tools
