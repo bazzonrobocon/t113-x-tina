@@ -22,3 +22,6 @@
 [submodule "openwrt/package"]
 	path = openwrt/package
 	url = https://github.com/bazzonrobocon/t113-x-tina-openwrt-package
+[submodule "platform"]
+	path = platform
+	url = https://github.com/bazzonrobocon/t113-x-tina-platform
