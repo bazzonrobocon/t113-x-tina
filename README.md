@@ -1,2 +1,27 @@
 # t113-x-tina
- 
+
+## Prerequisites
+Docker installed on your system.
+
+## Build Steps
+1) Build Docker Image 
+```bash
+./docker_build.sh
+./docker_run.sh
+```
+
+2) Config board
+```bash
+./build.sh config
+```
+Select: 1 -> (1 or 2) -> 0 -> 4 -> 0
+
+3) Start to build image
+```bash
+./build.sh
+```
+
+4) After building successfully, pack the image
+```bash
+./build.sh pack
+```
