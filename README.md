@@ -21,7 +21,8 @@ Select: 1 -> (1 or 2) -> 0 -> 4 -> 0
 ./build.sh
 ```
 
-4) After building successfully, pack the image
+4) After building successfully, pack the image.
+This is Allwinner-based Image, to convert this into regular image, we have to use [OpenixCard](https://github.com/YuzukiTsuru/OpenixCard)
 ```bash
 ./build.sh pack
 ```
