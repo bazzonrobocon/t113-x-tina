@@ -3,6 +3,12 @@
 ## Prerequisites
 Docker installed on your system.
 
+Make sure you have init submodule
+```
+git submodule init
+git submodule update
+```
+
 ## Build Steps
 1) Build Docker Image 
 ```bash
